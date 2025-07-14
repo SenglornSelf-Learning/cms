@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8" />
     <title layout:titel-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">CMS</title>
-    <!-- Child style layout will render here -->
+
+    <!-- Include CSS -->
     <th:block th:replace="~{fragments/styles}"></th:block>
-    <!-- Child headScript layout will render here -->
+
+    <!-- Include additional head scripts -->
     <th:block th:replace="~{fragments/headScript}"></th:block>
 </head>
 <body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
@@ -19,26 +20,23 @@
 
 <div class="wrapper">
 
-    <!-- left sidebar menu scrollbar -->
+    <!-- left sidebar -->
     <div th:replace="~{fragments/leftSideBar}"></div>
 
+    <!-- Header -->
     <div th:replace="~{fragments/header}"></div>
 
+    <!-- Main content area -->
     <div class="page-wrapper">
-        <!-- Header -->
-
-        <!-- body content -->
         <div class="content-wrapper">
             <div class="content" layout:fragment="content">
-                <!-- Content child will appear at here -->
+                <!-- Content overridden by child here -->
             </div>
         </div>
     </div>
 </div>
 
-    <!-- Javascript -->
     <!-- JS Scripts -->
-    <!-- Child Scripts layout will render here -->
     <th:block th:replace="~{fragments/scripts}"></th:block>
 </body>
 </html>

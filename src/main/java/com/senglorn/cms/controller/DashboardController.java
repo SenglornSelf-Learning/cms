@@ -11,4 +11,9 @@ public class DashboardController {
     public String dashboard(){
         return "fragments/layout/adminLayout";
     }
+
+    @GetMapping("/admin")
+    public String adminPage() {
+        return "admin/main"; // matches templates/admin/main.html
+    }
 }

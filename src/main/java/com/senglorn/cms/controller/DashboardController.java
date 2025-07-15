@@ -14,6 +14,6 @@ public class DashboardController {
 
     @GetMapping("/admin")
     public String adminPage() {
-        return "admin/main"; // matches templates/admin/main.html
+        return "admin/main";
     }
 }

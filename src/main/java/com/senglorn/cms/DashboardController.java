@@ -1,4 +1,4 @@
-package com.senglorn.cms.controller;
+package com.senglorn.cms;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

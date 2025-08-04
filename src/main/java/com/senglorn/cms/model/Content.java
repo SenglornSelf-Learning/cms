@@ -23,5 +23,5 @@ public class Content {
     private LocalDateTime createdAt;
 
     /* category_id int, foreign key (category_id) references tb_categories (id) */
-    private Content content;
+    private Category category;
 }

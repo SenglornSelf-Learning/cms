@@ -2,11 +2,10 @@ package com.senglorn.cms.model;
 
 import lombok.*;
 
-@NoArgsConstructor
+@Data
 @AllArgsConstructor
-@Setter
-@Getter
-@Builder
+@NoArgsConstructor
+@ToString
 public class Category {
     private Integer id;
     private String name;

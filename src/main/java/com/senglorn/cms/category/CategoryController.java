@@ -1,11 +1,14 @@
 package com.senglorn.cms.category;
 
 import com.senglorn.cms.category.service.CategoryService;
+import com.senglorn.cms.model.Category;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -16,10 +19,14 @@ public class CategoryController {
     @GetMapping("/category")
     public String viewCategory(Model model){
 
-        System.err.println("Data: " + categoryService.categories());
+        List<Category> categories = categoryService.categories();
+        System.err.println("Data: " + categories);  // will print readable info
 
-        model.addAttribute("categories", categoryService.categories());
+        for (Category category : categories) {
+            System.err.println(category);
+        }
 
+        model.addAttribute("categories", categories);
         return "category/main";
     }
 }

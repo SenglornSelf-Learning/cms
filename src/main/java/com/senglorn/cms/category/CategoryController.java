@@ -18,15 +18,9 @@ public class CategoryController {
 
     @GetMapping("/category")
     public String viewCategory(Model model){
-
         List<Category> categories = categoryService.categories();
-        System.err.println("Data: " + categories);  // will print readable info
-
-        for (Category category : categories) {
-            System.err.println(category);
-        }
-
         model.addAttribute("categories", categories);
+
         return "category/main";
     }
 }

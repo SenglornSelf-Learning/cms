@@ -14,6 +14,6 @@ public class CategoryServiceImp implements CategoryService{
     private final CategoryRepository categoryRepository;
     @Override
     public List<Category> categories() {
-           return categoryRepository.selectAllCategorise();
+        return categoryRepository.selectAllCategorise();
     }
 }
